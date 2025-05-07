@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FalopaSound - Consola de Sonidos Felinos</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/cat-face.css">
+</head>
+<body>
+    <div class="container">
+        <div class="console">
+            <div class="header">
+                <h1>FalopaSound v1.0</h1>
+                <div class="volume-control">
+                    <label for="volume">Volumen</label>
+                    <input type="range" id="volume" min="0" max="100" value="50">
+                </div>
+            </div>
+            
+            <div class="display-container">
+                <div class="cat-display">
+                    <div id="cat-face" class="cat-pixel-art"></div>
+                </div>
+                
+                <div class="visualizer-container">
+                    <div id="audio-visualizer" class="pixel-art"></div>
+                </div>
+            </div>
+            
+            
+            <div class="sound-buttons">
+                <button class="sound-btn" data-sound="calm">🌿</button>
+                <button class="sound-btn" data-sound="calm">🧘</button>
+                <button class="sound-btn" data-sound="calm">💤</button>
+                <button class="sound-btn" data-sound="calm">💭</button>
+                <button class="sound-btn" data-sound="calm">🌧️</button>
+                <button class="sound-btn" data-sound="calm">🏜️</button>
+                <button class="sound-btn" data-sound="calm">🌌</button>
+                <button class="sound-btn" data-sound="calm">🏙️</button>
+                <button class="sound-btn" data-sound="calm">🏠</button>
+                <button class="sound-btn" data-sound="calm">🌙</button>
+                <button class="sound-btn" data-sound="calm">😻</button>
+                <button class="sound-btn" data-sound="calm">🐱</button>
+                <button class="sound-btn" data-sound="calm">🙀</button>
+                <button class="sound-btn" data-sound="calm">🐦</button>
+                <button class="sound-btn" data-sound="calm">📢</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="js/app.js"></script>
+</body>
+</html>

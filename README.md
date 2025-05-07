@@ -1,40 +1,55 @@
-# MiauControl
+# MiauSound
 
 ## Descripción
-MiauControl es una aplicación web innovadora diseñada para la gestión y control de sonidos felinos. Esta plataforma permite a los usuarios grabar, organizar y reproducir diferentes sonidos de gatos, creando una biblioteca única de maullidos y ronroneos.
+MiauSound es una consola de sonidos felinos interactiva y responsiva. Esta aplicación web permite reproducir diferentes sonidos ambientales y felinos a través de una interfaz estilo pixel art inspirada en consolas retro. La aplicación incluye un visualizador de audio y una representación animada de un gato que cambia de estado de ánimo aleatoriamente.
 
 ## Características Principales
-- Grabación y reproducción de sonidos felinos
-- Biblioteca organizada de sonidos
-- Interfaz intuitiva y amigable
-- Sistema de categorización de sonidos
+- Interfaz responsiva que se adapta a dispositivos móviles y de escritorio
+- Control de volumen integrado
+- 15 botones de sonido diferentes para reproducir diversos efectos sonoros
+- Visualizador de frecuencias de audio en tiempo real
+- Representación de un gato en pixel art con más de 8 estados emocionales diferentes
+- Cambios aleatorios de expresión del gato cada 20-30 segundos
+- Diseño retro con estética pixel art
 
 ## Requisitos
-- Node.js (versión 14 o superior)
 - Navegador web moderno (Chrome, Firefox, Safari)
-- Micrófono (para funciones de grabación)
-- Conexión a Internet
+- Conexión a Internet (opcional, solo para cargar la página inicial)
 
 ## Instalación
 1. Clonar el repositorio:
    ```bash
    git clone https://github.com/tuusuario/miausound.git
    ```
-2. Instalar dependencias:
+2. Navegar al directorio del proyecto:
    ```bash
-   npm install
+   cd miausound
    ```
-3. Configurar variables de entorno:
-   - Copiar `.env.example` a `.env`
-   - Ajustar las variables según sea necesario
+3. Agregar archivos de sonido en formato MP3 a la carpeta `sounds/` (ver instrucciones en `sounds/README.md`)
 
 ## Uso
-1. Iniciar el servidor de desarrollo:
-   ```bash
-   npm run dev
-   ```
-2. Abrir el navegador en `http://localhost:3000`
-3. Seguir las instrucciones en pantalla para comenzar a grabar y gestionar sonidos
+1. Abrir el archivo `index.html` en un navegador web
+2. Ajustar el volumen según sea necesario
+3. Hacer clic en cualquiera de los botones de sonido para reproducirlo
+4. Observar el visualizador de audio y los cambios de expresión del gato
+
+## Estructura del Proyecto
+```
+miausound/
+├── css/
+│   ├── style.css        # Estilos principales
+│   └── cat-face.css     # Estilos específicos para la cara del gato
+├── js/
+│   └── app.js           # Lógica de la aplicación
+├── sounds/              # Carpeta para archivos de audio (no incluidos)
+│   └── README.md        # Instrucciones para agregar sonidos
+└── index.html           # Página principal
+```
+
+## Personalización
+- Para agregar nuevos sonidos, añade archivos MP3 a la carpeta `sounds/` y actualiza los botones en `index.html`
+- Para modificar las expresiones del gato, edita las definiciones en `js/app.js`
+- Para cambiar los colores y el estilo visual, modifica las variables CSS en `css/style.css`
 
 ## Contribución
 Las contribuciones son bienvenidas. Por favor, sigue estos pasos:

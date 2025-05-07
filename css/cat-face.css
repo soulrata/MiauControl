@@ -1,0 +1,117 @@
+/* Estilos para la cara del gato en pixel art */
+.cat-pixel-art {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 24px;
+    line-height: 1;
+    color: var(--text-color);
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cat-ears {
+    display: flex;
+    justify-content: space-between;
+    width: 80px;
+    margin-bottom: 5px;
+}
+
+.cat-ears:before,
+.cat-ears:after {
+    content: "^";
+    font-size: 30px;
+    transform: rotate(0deg);
+    display: inline-block;
+}
+
+.cat-ears.sad:before,
+.cat-ears.sad:after {
+    transform: rotate(180deg);
+}
+
+.cat-ears.angry:before,
+.cat-ears.angry:after {
+    transform: rotate(30deg);
+}
+
+.cat-face {
+    border: 2px solid var(--text-color);
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background-color: var(--button-color);
+}
+
+.cat-eyes {
+    font-size: 28px;
+    letter-spacing: 10px;
+    margin-bottom: 5px;
+}
+
+.cat-mouth {
+    font-size: 20px;
+}
+
+/* Animaciones para los diferentes estados */
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+@keyframes wiggle {
+    0%, 100% { transform: rotate(0); }
+    25% { transform: rotate(5deg); }
+    75% { transform: rotate(-5deg); }
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+}
+
+/* Aplicar animaciones a diferentes estados */
+.cat-pixel-art.happy .cat-face {
+    animation: bounce 2s infinite;
+}
+
+.cat-pixel-art.playful .cat-face {
+    animation: wiggle 3s infinite;
+}
+
+.cat-pixel-art.sleeping .cat-eyes {
+    animation: blink 4s infinite;
+}
+
+/* Estilos responsivos */
+@media (max-width: 767px) {
+    .cat-pixel-art {
+        font-size: 20px;
+    }
+    
+    .cat-face {
+        width: 70px;
+        height: 70px;
+    }
+    
+    .cat-ears {
+        width: 70px;
+    }
+    
+    .cat-eyes {
+        font-size: 24px;
+    }
+    
+    .cat-mouth {
+        font-size: 18px;
+    }
+}
