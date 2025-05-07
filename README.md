@@ -1,22 +1,52 @@
 # MiauControl
 
 ## Descripción
-MiauControl es una aplicación para gestionar y controlar sonidos. Este proyecto está en desarrollo inicial.
+MiauControl es una aplicación web innovadora diseñada para la gestión y control de sonidos felinos. Esta plataforma permite a los usuarios grabar, organizar y reproducir diferentes sonidos de gatos, creando una biblioteca única de maullidos y ronroneos.
 
-## Características
-- [En desarrollo]
+## Características Principales
+- Grabación y reproducción de sonidos felinos
+- Biblioteca organizada de sonidos
+- Interfaz intuitiva y amigable
+- Sistema de categorización de sonidos
 
 ## Requisitos
-- [Por definir]
+- Node.js (versión 14 o superior)
+- Navegador web moderno (Chrome, Firefox, Safari)
+- Micrófono (para funciones de grabación)
+- Conexión a Internet
 
 ## Instalación
-- [Instrucciones pendientes]
+1. Clonar el repositorio:
+   ```bash
+   git clone https://github.com/tuusuario/miausound.git
+   ```
+2. Instalar dependencias:
+   ```bash
+   npm install
+   ```
+3. Configurar variables de entorno:
+   - Copiar `.env.example` a `.env`
+   - Ajustar las variables según sea necesario
 
 ## Uso
-- [Guía de uso pendiente]
+1. Iniciar el servidor de desarrollo:
+   ```bash
+   npm run dev
+   ```
+2. Abrir el navegador en `http://localhost:3000`
+3. Seguir las instrucciones en pantalla para comenzar a grabar y gestionar sonidos
 
 ## Contribución
-Las contribuciones son bienvenidas. Por favor, lee las guías de contribución antes de enviar un pull request.
+Las contribuciones son bienvenidas. Por favor, sigue estos pasos:
+1. Hacer fork del proyecto
+2. Crear una rama para tu característica (`git checkout -b feature/AmazingFeature`)
+3. Commit de tus cambios (`git commit -m 'Add some AmazingFeature'`)
+4. Push a la rama (`git push origin feature/AmazingFeature`)
+5. Abrir un Pull Request
 
 ## Licencia
-[Pendiente de definir]
+Este proyecto está licenciado bajo la Licencia MIT - ver el archivo [LICENSE](LICENSE) para más detalles.
+
+## Contacto
+Tu Nombre - [@tutwitter](https://twitter.com/tutwitter)
+Link del proyecto: [https://github.com/tuusuario/miausound](https://github.com/tuusuario/miausound)
