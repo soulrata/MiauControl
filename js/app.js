@@ -210,21 +210,23 @@ document.addEventListener('DOMContentLoaded', function() {
     function playSound(soundType) {
         if(currentAudio) {
             currentAudio.pause();
-            currentAudio = null;
+            currentAudio.currentTime = 0;
+            if(audioContext) {
+                audioContext.close();
+                audioContext = null;
+            }
         }
         
-        const audio = new Audio(`sounds/${soundType}.mp3`);
+        currentAudio = new Audio(`sounds/${soundType}.mp3`);
+        currentAudio.volume = volumeControl.value / 100;
+        currentAudio.loop = false;
         
-        audio.volume = volumeControl.value / 100;
-        audio.pause();
-        audio.currentTime = 0;
-        audio.loop = false;
-        audio.play();
+        currentAudio.addEventListener('ended', () => {
+            soundButtons.forEach(btn => btn.classList.remove('active'));
+        });
         
-        // Conectar analizador
-        connectAnalyser(audio);
-        
-        currentAudio = audio;
+        currentAudio.play();
+        connectAnalyser(currentAudio);
     }
     
     // Función para configurar el contexto de audio
