@@ -278,3 +278,14 @@ document.addEventListener('DOMContentLoaded', () => {
     createVisualizerBars();
     requestAnimationFrame(updateVisualizer);
 });
+
+// Actualizar indicador de volumen
+const volumeSlider = document.getElementById('volume');
+const volumePercentage = document.querySelector('.volume-percentage');
+
+volumeSlider.addEventListener('input', (e) => {
+    volumePercentage.textContent = `${e.target.value}%`;
+});
+
+// Inicializar valor
+volumeSlider.dispatchEvent(new Event('input'));
