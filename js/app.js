@@ -1,7 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     // Referencias a elementos del DOM
     const volumeControl = document.getElementById('volume');
-    const catFace = document.getElementById('cat-face');
     const audioVisualizer = document.getElementById('audio-visualizer');
     const soundButtons = document.querySelectorAll('.sound-btn');
     const timerDisplay = document.querySelector('.timer');
@@ -12,19 +11,12 @@ document.addEventListener('DOMContentLoaded', function() {
     let analyser = null;
     let dataArray = null;
     let visualizerBars = [];
-    let catMood = 'neutral';
-    let catMoodTimer = null;
     let elapsedTime = 0;
     let timerInterval = null;
     
     // Inicializar visualizador
     initVisualizer();
     
-    // Inicializar cara de gato
-    initCatFace();
-    
-    // Iniciar cambio aleatorio de estado del gato
-    startRandomCatMoodChanges();
     
     // Control de volumen
     volumeControl.addEventListener('input', function() {
@@ -191,18 +183,8 @@ document.addEventListener('DOMContentLoaded', function() {
     function startRandomCatMoodChanges() {
         // Cambiar el estado del gato cada 20-30 segundos
         setInterval(() => {
-            const moods = ['neutral', 'happy', 'sad', 'angry', 'surprised', 'sleepy', 'curious', 'playful'];
-            const randomMood = moods[Math.floor(Math.random() * moods.length)];
-            changeCatMood(randomMood);
             
             // Actualizar visualmente qué botón de estado está activo
-            moodButtons.forEach(btn => {
-                if (btn.getAttribute('data-mood') === randomMood) {
-                    btn.classList.add('active');
-                } else {
-                    btn.classList.remove('active');
-                }
-            });
         }, Math.random() * 10000 + 20000); // Entre 20 y 30 segundos
     }
     
